@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Student portal login template">
+  <title>Student Login | University Student Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <p class="demo-banner">Template page: connect it to your own authentication API before use.</p>
+
+    <header class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/>
+      </svg>
+      <h1 data-institution>University Student Portal</h1>
+      <p>Sign in to your student account</p>
+    </header>
+
+    <div id="alert" class="alert" role="alert" aria-live="polite"></div>
+
+    <form id="login-form" novalidate>
+      <div class="field">
+        <label for="identifier">Registration number or email</label>
+        <input id="identifier" name="identifier" type="text" autocomplete="username" required>
+        <p class="error" id="identifier-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="password-wrap">
+          <input id="password" name="password" type="password" autocomplete="current-password" required minlength="8">
+          <button type="button" class="toggle-pw" data-toggle="password" aria-label="Show password">Show</button>
+        </div>
+        <p class="error" id="password-error"></p>
+      </div>
+
+      <div class="inline">
+        <label><input type="checkbox" id="remember"> Remember me</label>
+        <a href="#" id="forgot">Forgot password?</a>
+      </div>
+
+      <button class="btn" type="submit">Sign in</button>
+    </form>
+
+    <p class="switch">New student? <a href="signup.html">Create an account</a></p>
+  </main>
+</body>
+</html>
